@@ -39,6 +39,7 @@ def search_path_maze(maze: list, start: tuple, end: tuple) -> list:
         for node in graph[start]:
             if node not in path:
                 dfs(graph, node, end, path)
+
         return route
 
     # graph adjacency list (type: dict)
@@ -51,6 +52,7 @@ def search_path_maze(maze: list, start: tuple, end: tuple) -> list:
 
     # list of exit paths
     route_list = dfs(dict_vortex, start, stop)
+    route_list = route_list[0]
 
     min_answer = []
 
