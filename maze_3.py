@@ -58,6 +58,7 @@ def search_path_maze(maze: list, start: tuple, end: tuple) -> list:
         min_answer.append(len(i) - 1)
     if len(min_answer) == 0:
         return - 1
+
     answer = 'Minimum number of moves to the exit = ' + str(min(min_answer))
 
     return answer, route_list
@@ -74,7 +75,6 @@ start = (0, 0)
 stop = (2, 2)
 
 answer, route = search_path_maze(maze, start, stop)
-print(search_path_maze(maze, start, stop))
 
 print(answer)
 print(route)
